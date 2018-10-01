@@ -4,7 +4,7 @@
 
 
 
-Develop using CEEVEEE theme:
+Develop using CEEVEEE theme and @eneskemalergin 's updates:
 ==================================================================================================
 
 CEEVEE is a clean, modern, fully responsive site template for your
