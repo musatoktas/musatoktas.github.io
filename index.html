@@ -1,335 +1,375 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-    <!--- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Musa TOKTAŞ</title>
-    <meta name="description" content="Main Page of Musa Toktas">
-    <meta name="author" content="Musa Toktaş">
-    <meta name="keywords" content="Musa Toktaş, Software Development, Back-end Development, Python, entrepreneurship, cyber security, heraklet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musa Toktaş | Tech Entrepreneur, CTO, AI & Travel-Tech Builder</title>
+  <meta name="description" content="Musa Toktaş is a Dubai-based technology entrepreneur, CTO, software consultant and founder building AI, travel-tech, cybersecurity and digital operating systems across the Middle East, Europe and Turkey.">
+  <meta name="author" content="Musa Toktaş">
+  <meta name="keywords" content="Musa Toktaş, CTO, Tech Entrepreneur, Guide of Dubai, Heraklet, HOI Holding, Travel Tech, AI Operating System, Software Development, Cybersecurity, Dubai">
+  <meta property="og:title" content="Musa Toktaş | Tech Entrepreneur & CTO">
+  <meta property="og:description" content="Dubai-based technology entrepreneur building scalable AI, travel-tech, cybersecurity and digital platforms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://musatoktas.github.io/">
+  <meta property="og:image" content="https://musatoktas.github.io/images/musa-toktas-profile.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: rgba(255,255,255,.075);
+      --panel-strong: rgba(255,255,255,.12);
+      --text: #f7fafc;
+      --muted: #aab7ca;
+      --line: rgba(255,255,255,.16);
+      --accent: #64d2ff;
+      --accent-2: #8b5cf6;
+      --white: #fff;
+      --shadow: 0 24px 80px rgba(0,0,0,.35);
+      --radius: 28px;
+    }
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(100,210,255,.26), transparent 32%),
+        radial-gradient(circle at 85% 0%, rgba(139,92,246,.28), transparent 34%),
+        linear-gradient(135deg, #07101f 0%, #0b1222 42%, #111827 100%);
+      line-height: 1.7;
+    }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99652793-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 
-      gtag('config', 'UA-99652793-3');
-    </script>
-    
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(8,17,31,.74);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 16px 0;
+    }
+    .brand { font-weight: 800; letter-spacing: .02em; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--white); }
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    .hero { padding: 92px 0 54px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 36px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.05);
+      font-size: 13px;
+    }
+    .eyebrow i { color: var(--accent); }
+    h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), #ffffff 46%, #c4b5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      max-width: 760px;
+      font-size: clamp(18px, 2.2vw, 23px);
+      color: #dce6f6;
+      margin: 0 0 30px;
+    }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--white); color: #08111f; }
+    .button.secondary { background: rgba(255,255,255,.06); color: var(--white); }
 
-    <!-- Script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/analytics.js"></script>
+    .social { display: flex; gap: 12px; flex-wrap: wrap; }
+    .social a {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .social a:hover { color: var(--white); background: var(--panel-strong); }
 
-    <!-- Favicons
-    ================================================== -->
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <link rel="bookmark" type='image/x-icon' href='favicon.ico' />
+    .profile-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .profile-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 24px;
+      background: #0f172a;
+      border: 1px solid var(--line);
+    }
+    .profile-card h2 { margin: 20px 0 6px; font-size: 24px; }
+    .profile-card p { margin: 0; color: var(--muted); }
 
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 36px;
+    }
+    .stat {
+      padding: 22px;
+      border-radius: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .stat strong { display: block; font-size: 28px; line-height: 1; }
+    .stat span { color: var(--muted); font-size: 14px; }
 
+    section { padding: 64px 0; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+    .section-title h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); letter-spacing: -.04em; line-height: 1.05; }
+    .section-title p { max-width: 560px; margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .card h3 { margin: 0 0 10px; font-size: 21px; }
+    .card p { margin: 0; color: var(--muted); }
+    .tag {
+      display: inline-flex;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .timeline { display: grid; gap: 18px; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 26px;
+      border-radius: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .timeline-item .date { color: var(--accent); font-weight: 800; }
+    .timeline-item h3 { margin: 0 0 6px; font-size: 22px; }
+    .timeline-item p { margin: 0; color: var(--muted); }
+
+    .cta {
+      border-radius: 32px;
+      padding: 42px;
+      background: linear-gradient(135deg, rgba(100,210,255,.22), rgba(139,92,246,.18));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .cta h2 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 48px); letter-spacing: -.04em; }
+    .cta p { max-width: 720px; margin: 0 0 24px; color: #dce6f6; }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid, .stats { grid-template-columns: 1fr; }
+      .section-title { align-items: start; flex-direction: column; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .hero { padding-top: 64px; }
+    }
+  </style>
 </head>
-
 <body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Musa <span>Toktaş</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#experience">Experience</a>
+        <a href="#focus">Focus</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Header
-  ================================================== -->
-  <header id="home">
-     <nav id="nav-wrap">
-       <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-       <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-       <ul id="nav" class="nav">
-         <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-         <li><a class="smoothscroll" href="#about">About</a></li>
-         <li><a class="smoothscroll" href="#experience">Experience</a></li>
-         <li><a class="smoothscroll" href="#education">Education</a></li>
-         <li><a class="smoothscroll" href="#more">More</a></li>
-       </ul> <!-- end #nav -->
-     </nav> <!-- end #nav-wrap -->
-
-     <div class="row banner">
-        <div class="banner-text">
-           <h1 class="responsive-headline">I'm Musa Toktas</h1>
-            <h3 style="color: white;">I'm a Dubai-based Tech Entrepreneur, Software Consultant, and CTO building smart tourism and fintech platforms that scale globally. Let’s start scrolling and explore what I create and lead. Learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
-           <hr />
-           <ul class="social">
-               <li><a href="https://www.facebook.com/musa.toktas.58"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="https://twitter.com/mtoktas34"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="https://github.com/musatoktas"><i class="fa fa-github"></i></a></li>
-               <li><a href="https://linkedin.com/in/musatoktas/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://www.instagram.com/musatoktas34/"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://www.behance.net/mtoktas387fe7"><i class="fa fa-behance"></i></a></li>
-           </ul>
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa fa-map-marker"></i> Dubai, Istanbul, global digital products</div>
+          <h1>Building <span class="gradient-text">AI-powered</span> products, platforms and operating systems.</h1>
+          <p class="lead">I am Musa Toktaş, a technology entrepreneur, CTO and software consultant focused on travel-tech, AI operating systems, cybersecurity, SaaS products and scalable digital infrastructure.</p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/musatoktas/My_CV/raw/master/Musa-Toktas_CV.pdf"><i class="fa fa-download"></i> Download Resume</a>
+            <a class="button secondary" href="#ventures"><i class="fa fa-rocket"></i> Explore Ventures</a>
+          </div>
+          <div class="social" aria-label="Social links">
+            <a href="https://github.com/musatoktas" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+            <a href="https://linkedin.com/in/musatoktas/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/musatoktas34/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/mtoktas34" target="_blank" rel="noopener" aria-label="X"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.behance.net/mtoktas387fe7" target="_blank" rel="noopener" aria-label="Behance"><i class="fa fa-behance"></i></a>
+          </div>
         </div>
-     </div>
-     <p class="scrolldown">
-        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-     </p>
-  </header> <!-- Header End -->
-
-  <!-- About Section
-  ================================================== -->
-  <section id="about">
-     <div class="row">
-        <div class="three columns">
-           <img class="profile-pic"  src="images/musa-toktas-profile.png" alt="" />
-        </div>
-        <div class="nine columns main-col">
-           <h2>About Me</h2>
-           <p>Tech entrepreneur and strategic thinker with a strong foundation in software engineering and tourism technology. As the CTO of HOI Holding and Managing Director of Heraklet, he spearheads digital transformation, AI integration, and fintech innovations. He is also the founder of Guide of Dubai, a travel tech platform that connects tourists with curated experiences through a smart ecosystem. With a deep understanding of SaaS, scalability, and user experience, he drives the group’s technology roadmap and global digital strategy.</u></p>
-            <div class="row">
-                 <div class="columns download">
-                 <p><a href="https://github.com/musatoktas/My_CV/raw/master/Musa-Toktas_CV.pdf" class="button"><i class="fa fa-download"></i>Download Resume</a></p>
-              </div>
-           </div> <!-- end row -->
-        </div> <!-- end .main-col -->
-     </div>
-  </section> <!-- About Section End-->
-
-
-
-    <!-- Work Experience Section
-    ================================================== -->
-    <section id="experience">
-
-        <div class="row work">
-            <!-- Heading of the Experience section -->
-            <div class="twelve columns header-col">
-                <h1>Work Experience</h1>
-            </div>
-
-            <div class="twelve columns main-col">
-
-                <!-- First Listing  -->
-                 <div class="row item">
-                    <div class="eight columns">
-                        <h3>HOI Holding</a></h3>
-                        <p class="info">Board Member & CTO<span>&bull;</span>Bakirkoy, Istanbul<span>&bull;</span> <em class="date">April 2025 - Ongoing</em></p>
-                        <ul>
-                          <li> Within <strong>HOI Holding</strong>, the brands <strong>MBD Tourism</strong>, <strong>CRD Car Rental</strong>, 
-  <strong>Heraklet</strong>, and <strong>Guide of Dubai</strong> report directly to <strong>Musa Toktas</strong>. 
-  He is authorized to oversee and make strategic decisions regarding all <strong>software systems</strong> used across the holding. 
-  Additionally, he provides advisory services for the group’s <strong>overseas investments</strong>, particularly from Turkey to international markets. 
-  <strong>HOI Holding</strong> currently operates with a presence in <strong>Dubai, Hamburg, London, and Istanbul</strong>.
-</li>
-                        </ul>
-                    </div>
-                    <div class="three columns">
-                        <a href="http://hoi.com.tr" target="_blank"><img class="logo-pic" src="images/hoi-holding-icon.png" alt="hoi_holding_logo" /></a>
-                    </div>
-                </div> <!-- item end -->
-
-                <!-- Second Listing  -->
-                <div class="row item">
-                    <div class="eight columns">
-                        <h3>Heraklet</h3>
-                        <p class="info">Director<span>&bull;</span> Bakirkoy, Istanbul<span>&bull;</span> <em class="date">January 2018 - Ongoing</em> </p>
-                         <ul>
-                          <li>
-                           As the <strong>Founder & Director of Heraklet</strong>, a tailor-made software development company, 
-  <strong>Musa Toktas</strong> has successfully delivered over <strong>100 projects</strong> for more than 
-  <strong>50 companies</strong> across Europe, the USA, and the Middle East. 
-  Leading developer teams specialized in <strong>Mobile, Web, and DevOps</strong stacks, 
-  he has a strong track record in <strong>Project Management</strong> and delivering scalable digital solutions. 
-                          </li>
-                        </ul>
-                    </div>
-                    <div class="three columns">
-                        <a href="https://www.instagram.com/herakletofficial/" target="_blank"><img class="logo-pic" src="images/heraklet-icon-rounded.png" alt="heraklet Logo" /></a>
-                    </div>
-                </div> <!-- item end -->
-
-                <!-- Third Listing  -->
-                <div class="row item">
-                    <div class="eight columns">
-                        <h3>Siemens Gebze Digital Factory</h3>
-                        <p class="info">Software Engineer<span>&bull;</span>Gebze, Kocaeli<span>&bull;</span> <em class="date">Jan. 2018 - March 2019</em> </p>
-                          <ul>
-                            <li>
-                                 <strong>Full-stack web developer</strong> responsible for developing software modules and digitalizing industrial processes. 
-  Collaborated with multidisciplinary teams, including experienced process engineers, to streamline operations. 
-  Successfully developed a total of <strong>16 modules</strong> for <strong>DigiOne Factory Process Management Software</strong>, 
-  covering functionalities such as <strong>order management</strong>, <strong>product tracking</strong>, and <strong>supply management</strong>.
-                            </li>
-                           
-                          </ul>
-                    </div>
-                    <div class="three columns">
-                        <a href="https://www.instagram.com/explore/locations/284812202/siemens-gebze/" target="_blank"><img class="logo-pic" src="images/siemens-logo.png" alt="Siemens Logo" /></a>
-                    </div>
-                </div> <!-- item end -->
-
-                <!-- Fourth Listing  -->
-                <div class="row item">
-                    <div class="eight columns">
-                        <h3>Nokia Turkey Head Quarter</h3>
-                        <p class="info">Engineering Intern<span>&bull;</span> Dudullu, Istanbul<span>&bull;</span> <em class="date">July 2017 - Aug. 2017</em></p>
-                        <ul>
-                            <li> I have been selected as a summer intern to the Nokia. My 
-                              responsibility was Reasearch and Development of subjects 
-                              below.
-                              <ul>
-                                <li>New Product Integration Department 
-                              Topic: Power Line Communication Theories and Applications on Smart Grid.</li>
-                                <li>Research & Development 
-                              Topic: Working Principle of Current Transformer's</li>
-                              </ul>
-                            </li>
-                        </ul> 
-                    </div>
-                    <div class="three columns">
-                        <a href="https://networks.nokia.com/" target="_blank"><img class="logo-pic" src="images/Nokia_logo.png" alt="Nokia Logo" /></a>
-                    </div>
-                </div> <!-- item end -->
-
-            </div> <!-- main-col end -->
-
-        </div> <!-- End Work -->
-
-    </section> <!-- Experience Section End-->
-
-    <!-- Education Section
-    ================================================== -->
-    <section id="education">
-        <div class="row education">
-            <div class="twelve columns header-col">
-                <h1>Education</h1>
-            </div>
-
-            <div class="twelve columns main-col">
-
-                <!-- First Item -->
-                <div class="row item">
-                    <div class="three columns">
-                        <a href="http://www.ayu.edu.tr/" target="_blank"><img class="uiuc-pic"  src="https://github.com/musatoktas/musatoktas.github.io/blob/master/images/ayu-logo.png?raw=true" alt="AYU-logo" /></a>
-                    </div>
-                    <div class="nine columns">
-                        <h3>Ahmet Yesevi University</h3>
-                        <p class="info">B. Eng. Computer Engineering<span>&bull;</span> Türkistan, Kazakistan <span>&bull;</span> <em class="date">September 2020</em></p>
-                        <ul>
-                            <li>Its my sophomore year in Ahmet Yesevi University. I realize Computer Engineering fits me better than any other degrees.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- First Item ends -->
-                <div class="row item">
-                    <div class="three columns">
-                        <a href="http://www.kocaeli.edu.tr/" target="_blank"><img class="uiuc-pic"  src="images/kou_logo.png" alt="KOU Logo" /></a>
-                    </div>
-                    <div class="nine columns">
-                        <h3>Kocaeli University</h3>
-                        <p class="info">B. Eng. Electrical Engineering<span>&bull;</span> Izmit, Kocaeli <span>&bull;</span> <em class="date">September 2014</em></p>
-                        <ul>
-                            <li>I have dropped out my bachelor degree at third year here in Kocaeli University, Electrical Engineering Department. I have contributed bunch of Student's Clubs, and other extracurricular activities. I am also employed in here for Software Developer position by Kocaeli Open Source Lab. We had built a web app called Portal App by using PHP Yii2 framework. </li>
-                        </ul>
-                    </div>
-                </div> <!-- item end -->
-
-
-
-                <!-- Second Item -->
-                 <!-- item end -->
-
-                <!-- Third Item -->
-                <div class="row item">
-                    <div class="three columns" >
-                        <a href="#" target="_blank"><img class="rdfz-pic"  src="images/to/coursera.png" alt="cisco_logo" /></a>
-                        <a href="#" target="_blank"><img style="padding-right: 40px;"  src="images/to/cisco_logo_large.png" alt="cisco_logo" /></a>
-                        <a href="#" target="_blank"><img  style="padding-right: 40px;" src="images/to/AB2018.png" alt="cisco_logo" /></a>
-                        <a href="#" target="_blank"><img style="padding-right: 40px;"  src="images/to/iie.png" alt="cisco_logo" /></a>
-                        <a href="#" target="_blank"><img style="padding-right: 40px;"  src="images/to/bakanlik.png" alt="cisco_logo" /></a>
-                    </div>
-                    <div class="nine columns">
-                        <h3>Authority Accredited & Online Certifications</h3>
-                        <p class="info">Motivated Self-learner <span>&bull;</span> Izmit, Kocaeli <span>&bull;</span> <em class="date">August 2014 - Present</em></p>
-                        <ul> <h4>Web Development Related Courses</h4>
-                            <li><a href="https://www.freecodecamp.org/certification/musatoktas/responsive-web-design" target="_blank">Responsive Web Design Developer Certification</a>,<span>Jan 2022</span> <em>FreeCodeCamp</em></li>
-                            <li><a href="https://drive.google.com/open?id=1-qDSYMo1IvSq2FLC0Lqwl8u1W1F4t9OO" target="_blank">Cisco Wi-Fi Wireless Network Training</a>,<span>May 2018</span> <em>Cisco Network Academy</em></li>
-                            <li><a href="https://www.hacktrickconf.com/" target="_blank">DevOps: Docker Container System</a>, <span>March 2018</span><em>Hacktrick Cyber Security Organization</em></li>
-                            <li><a href="https://ab.org.tr/ab18/" target="_blank">DevOps: AWS and Ansible Applications</a>, <span>Feb 2018</span><em>20. Academic Information Technology Trainings</em></li>
-                            <li><a href="https://www.coursera.org/account/accomplishments/certificate/2HG4SFRSGTHD" target="_blank">Programming for Everybody (Getting Started with Python)</a>,<span>Feb 2017</span><em> University of Michigan</em></li>
-                            <li><a href="https://drive.google.com/open?id=0B5Tw55vGTWmBUG5MVHc3WXRMRWtRQ3RkSlZXWVljWkFuZjVZ" target="_blank">Web Application Development with Python Django Framework</a>,  <span>Jan 2017</span><em>19. Academic Information Technology Trainings</em></li>
-                            <li><a href="https://www.coursera.org/account/accomplishments/verify/7B3CGCN8TCWK" target="_blank">HTML, CSS, and Javascript for Web Developers</a>,<span>Oct 2016</span><em> John Hopkins University</em></li>
-                        </ul>
-                        <ul> <h4>Business Related Courses</h4>
-                            
-                            
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Business Finance Management</a>, <span>Apr 2017</span>,<em> Istanbul Business Instutite</em></li>  
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Bussiness Analysis and Job Definitions</a>,<span>March 2017</span><em> Istanbul Business Instutite</em></li>
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Effective Communication Strategies and Body Language</a>,<span>Oct 2016</span><em> Istanbul Business Instutite</em></li>
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Entrepreneurship Certificate</a><span>Feb 2017</span>,<em> T.C. Ministry of Science, Tech, and Industry</em></li>                            
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Business Management and Leadership</a><span>Dec 2016</span>,<em> Istanbul Business Instutite</em></li>
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Strategic Management</a>, <span>Dec 2016</span><em> Istanbul Business Instutite</em></li>                            
-                            <li><a href="https://www.linkedin.com/in/musatoktas" target="_blank">Goal Setting and Habit Development for Academic Success</a>, <span>July 2015</span> <em>Scholar Development Center</em></li>
-                            
-                        </ul>
-                    </div>
-                </div> <!-- item end -->
-
-            </div> <!-- main-col end -->
-        </div> <!-- End Education -->
+        <aside class="profile-card">
+          <img src="images/musa-toktas-profile.png" alt="Musa Toktaş profile photo">
+          <h2>Musa Toktaş</h2>
+          <p>CTO, founder and technology operator connecting business strategy with production-grade software execution.</p>
+        </aside>
+      </div>
+      <div class="container stats">
+        <div class="stat"><strong>100+</strong><span>software projects delivered</span></div>
+        <div class="stat"><strong>50+</strong><span>companies served</span></div>
+        <div class="stat"><strong>4</strong><span>core markets: UAE, Turkey, Europe, USA</span></div>
+        <div class="stat"><strong>AI</strong><span>operating systems and automation focus</span></div>
+      </div>
     </section>
 
-  
-
-   <!-- footer
-   ================================================== -->
-   <footer>
-
-      <div class="row">
-         <div class="twelve columns" >
-
-            <ul class="social-links">
-               <li><a href="https://www.facebook.com/musa.toktas.58"><i class="fa fa-facebook" style="color: #fff;"></i></a></li>
-               <li><a href="https://twitter.com/mtoktas34"><i class="fa fa-twitter" style="color: #fff;"></i></a></li>
-               <li><a href="https://github.com/musatoktas"><i class="fa fa-github" style="color: #fff;"></i></a></li>
-               <li><a href="https://linkedin.com/in/musatoktas/"><i class="fa fa-linkedin" style="color: #fff;"></i></a></li>
-               <li><a href="https://www.instagram.com/mtoktas34/"><i class="fa fa-instagram" style="color: #fff;"></i></a></li>
-            </ul>
-
-            <ul class="copyright">
-               <li>&copy; Copyright 2014-2025 Musa TOKTAS</li>   
-            </ul>
-
-         </div>
-        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home">
-            <i class="icon-up-open"></i>
-            </a>
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>I translate complex business needs into maintainable product systems, from strategy and architecture to delivery, operations and measurable growth.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><span class="tag">Technology Leadership</span><h3>CTO mindset</h3><p>Product architecture, engineering discipline, delivery planning, team coordination, security awareness and long-term maintainability.</p></div>
+          <div class="card"><span class="tag">Product Building</span><h3>SaaS and platforms</h3><p>Marketplace flows, CRM, payments, mobile apps, partner panels, booking systems, quotation flows and customer experience loops.</p></div>
+          <div class="card"><span class="tag">AI Operations</span><h3>Lean operating company</h3><p>AI-assisted workflows for product, engineering, QA, content, support, growth, analytics and management reporting.</p></div>
         </div>
       </div>
+    </section>
 
-   </footer> <!-- Footer End-->
+    <section id="ventures">
+      <div class="container">
+        <div class="section-title">
+          <h2>Current ventures</h2>
+          <p>My current work connects tourism, software, cybersecurity, automation and digital transformation under practical, revenue-focused systems.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><span class="tag">HOI Holding</span><h3>Board Member & CTO</h3><p>Responsible for technology strategy across group companies, software systems, digital transformation and international technology initiatives.</p></div>
+          <div class="card"><span class="tag">Heraklet</span><h3>Founder & Director</h3><p>Tailor-made software development, cybersecurity, web, mobile, DevOps and digital product delivery for clients across multiple regions.</p></div>
+          <div class="card"><span class="tag">Guide of Dubai</span><h3>Founder</h3><p>A travel-tech and local discovery platform for Dubai experiences, tourism services, bookings, payments, partners and customer support operations.</p></div>
+        </div>
+      </div>
+    </section>
 
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p>A blend of entrepreneurship, software engineering, technical leadership and operational execution.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">2025 to Present</div>
+            <div><h3>HOI Holding, Board Member & CTO</h3><p>Leading technology strategy and software governance for group brands including MBD Tourism, CRD Car Rental, Heraklet and Guide of Dubai.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2018 to Present</div>
+            <div><h3>Heraklet, Founder & Director</h3><p>Delivered scalable software, web, mobile and DevOps projects while managing teams and client outcomes across Europe, the USA, Turkey and the Middle East.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2018 to 2019</div>
+            <div><h3>Siemens Gebze Digital Factory, Software Engineer</h3><p>Developed modules for factory process management, including order management, product tracking and supply operations.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">Education</div>
+            <div><h3>Computer Engineering & Engineering Foundation</h3><p>B.Eng. Computer Engineering from Ahmet Yesevi University, with earlier Electrical Engineering studies at Kocaeli University.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
-   <!-- <script type="text/javascript" src="back2top/back2top.js"></script> -->
+    <section id="focus">
+      <div class="container">
+        <div class="section-title">
+          <h2>Focus areas</h2>
+          <p>The areas I am actively building, improving and researching.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Travel-tech & marketplaces</h3><p>Tourism product infrastructure, supplier integrations, booking journeys, payments, WhatsApp sales flows and post-sale satisfaction loops.</p></div>
+          <div class="card"><h3>AI-assisted operating systems</h3><p>Agentic workflows for product management, QA, support, content, security, analytics, maintenance and executive decision support.</p></div>
+          <div class="card"><h3>Cybersecurity & reliability</h3><p>Security-minded engineering, ISO 27001 knowledge, technical maintenance, testing, monitoring and operational resilience.</p></div>
+          <div class="card"><h3>Software consulting</h3><p>Architecture, roadmap planning, delivery rescue, business analysis, stakeholder alignment and clean execution discipline.</p></div>
+          <div class="card"><h3>Digital growth</h3><p>SEO, ASO, analytics, funnel improvement, content systems, customer experience and measurable product-led growth.</p></div>
+          <div class="card"><h3>Global operations</h3><p>Building products and teams that can operate across UAE, Turkey, Europe and the United States.</p></div>
+        </div>
+      </div>
+    </section>
 
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <h2>Let’s build useful systems.</h2>
+          <p>I work on practical technology that improves operations, scales businesses and turns strategy into real products.</p>
+          <div class="actions">
+            <a class="button primary" href="https://linkedin.com/in/musatoktas/" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i> Connect on LinkedIn</a>
+            <a class="button secondary" href="https://github.com/musatoktas" target="_blank" rel="noopener"><i class="fa fa-github"></i> View GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2014-2026 Musa Toktaş. Built for clarity, speed and continuous improvement.</div>
+  </footer>
 </body>
-
 </html>
