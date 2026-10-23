@@ -71,7 +71,6 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: -.04em; font-weight: 500; }
 .site-header { position: relative; z-index: 5; background: var(--ink); color: var(--white); }
 .header-inner { min-height: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 700; letter-spacing: -.01em; text-decoration: none; }
-.brand-mark { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; background: var(--blue-bright); color: var(--white); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
 .site-nav ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px clamp(14px, 2vw, 28px); }
 .site-nav a { display: inline-block; padding-block: 10px; color: rgba(255,255,255,.76); font-size: 14px; font-weight: 500; text-decoration: none; border-bottom: 1px solid transparent; transition: color 160ms ease; }
 .site-nav a:hover { color: var(--white); }
