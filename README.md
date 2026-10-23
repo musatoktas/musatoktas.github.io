@@ -1,4 +1,3 @@
-# Portfolio and Home Page to musatoktas.github.io
+# musatoktas.com
 
-
-
+This is the personal website of Musa Toktaş, served by GitHub Pages from this repository. It is plain HTML with one stylesheet (`css/site.css`), self-hosted Archivo fonts (`fonts/`, SIL Open Font License) and no JavaScript, build step or tracking. Pages use relative links, so they work from the domain root and when a file is opened directly; only `404.html` uses root paths, because GitHub Pages serves it at any depth. To add a post: copy the folder `writing/typescript-noinfer-32-seconds/` to `writing/<new-slug>/`, change the title, description, canonical URL, Open Graph tags, JSON-LD `BlogPosting` and the article text in its `index.html`, add a card at the top of `writing/index.html` (and on the home page under "Latest writing"), add an `<entry>` to `feed.xml` and update its `<updated>` date, and add a `<url>` to `sitemap.xml`.
