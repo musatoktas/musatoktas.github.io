@@ -318,3 +318,4 @@ pre code { padding: 0; background: none; font-size: inherit; color: inherit; }
 }
 .photo-wide + .split { margin-top: clamp(48px, 7vw, 88px); }
 .section > .photo-wide:first-child { z-index: 2; margin-top: calc(-1 * clamp(64px, 9vw, 120px) - 40px); box-shadow: 0 24px 60px rgba(5,7,13,.25); }
+.section-foot { display: flex; flex-wrap: wrap; gap: 16px 32px; }
